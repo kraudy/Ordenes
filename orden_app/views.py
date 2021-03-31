@@ -17,4 +17,5 @@ class OrdenDetailView(DetailView):
 class ProcesoListView(ListView):
     model = Proceso
 
-
+class ProcesoDetailView(DetailView):
+    model = Proceso
