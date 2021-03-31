@@ -1,0 +1,12 @@
+Simple aplicacion CRUD de ordenes de pedidos
+
+Pasos
+ * Crear modelos : Ordenes, Procesos, Ordenes_procesos
+ * Crear index
+ * Crear lista/
+ * Crear detalle
+ * edicion
+ * eliminar 
+
+
+
