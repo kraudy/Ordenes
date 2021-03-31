@@ -2,6 +2,6 @@
 
 <ul>
 {% for proc in object_list %}
-<li>Proceso : <a href="">{{ proc.nombre }}</a></li>
+<li>Proceso : <a href="{% url 'orden_app:proceso_detalle' proc.id %}">{{ proc.nombre }}</a></li>
 {% endfor %}
 </ul>
