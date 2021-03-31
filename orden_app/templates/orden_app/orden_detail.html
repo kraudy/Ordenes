@@ -3,6 +3,6 @@
 <h3> Procesos de la orden </h3>
 
 {% for proc in orden_detalle.proceso.all %}
-	<p>Proceso : {{ proc.nombre }}</p>
+<p>Proceso : <a href="{% url 'orden_app:proceso_detalle' proc.id %}">{{ proc.nombre }}</a></p>
 {% endfor  %}
 

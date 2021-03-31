@@ -20,3 +20,4 @@ class ProcesoListView(ListView):
 
 class ProcesoDetailView(DetailView):
     model = Proceso
+    context_object_name = "proceso_detalle"
