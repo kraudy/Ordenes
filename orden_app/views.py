@@ -13,6 +13,7 @@ class OrdenListView(ListView):
 
 class OrdenDetailView(DetailView):
     model = Orden
+    context_object_name = "orden_detalle"
 
 class ProcesoListView(ListView):
     model = Proceso

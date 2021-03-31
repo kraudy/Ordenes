@@ -7,7 +7,7 @@ class Proceso(models.Model):
 
 class Orden(models.Model):
     nombre = models.CharField(max_length=100)
-    proceso = models.ManyToManyField(Proceso, verbose_name='lista de procesos')
+    proceso = models.ManyToManyField(Proceso, through='Ordenes_procesos')
     def __str__(self):
         return self.nombre
 
