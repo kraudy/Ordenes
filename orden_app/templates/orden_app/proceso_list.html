@@ -1,0 +1,7 @@
+<h2> Lista de procesos </h2>
+
+<ul>
+{% for proc in object_list %}
+<li>Proceso : <a href="">{{ proc.nombre }}</a></li>
+{% endfor %}
+</ul>

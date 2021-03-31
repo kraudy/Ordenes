@@ -14,3 +14,7 @@ class OrdenListView(ListView):
 class OrdenDetailView(DetailView):
     model = Orden
 
+class ProcesoListView(ListView):
+    model = Proceso
+
+
