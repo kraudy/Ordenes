@@ -22,6 +22,14 @@ class OrdenCreate(CreateView):
     model = Orden
     fields = ['nombre']
 
+class OrdenUpdate(UpdateView):
+    model = Orden
+    fields = ['nombre']
+
+class OrdenDelete(DeleteView):
+    model = Orden
+    fields = ['nombre']
+
 class ProcesoListView(ListView):
     model = Proceso
 
