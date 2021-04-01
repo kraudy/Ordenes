@@ -1,6 +1,8 @@
-Simple aplicacion CRUD de ordenes de pedidos
+# Simple aplicacion CRUD de ordenes de pedidos
 
-Pasos
+Esta es una simple practica for fun
+
+### Pasos
  * Crear modelos : Ordenes, Procesos, Ordenes_procesos
  * Crear index
  * Crear lista/
@@ -8,24 +10,24 @@ Pasos
  * edicion
  * eliminar 
 
-Crear un proj
+### Crear un proj
  * djang-admin startproject $nombre
 
-Pasos para crear una app en el proj
+### Pasos para crear una app en el proj
  * python3.9 manage.py startapp $app
  * agregar '$app' en /$proj/settings.py 
    - APP_INSTALLED = [... '$app'] 
 
-== MODELOS ==
+# Modelos
 
-Pasos para crear un modelo
+### Pasos para crear un modelo
  * Definir la neuva clase en app/models.py
 
-Generar SQL de los modelos
+### Generar SQL de los modelos
  * python3.9 manage.py makemigrations $app
      El sql generado sera guardado en /$app/migrations/000*
 
-Ejecutar SQL para la db
+### Ejecutar SQL para la db
  * python3.9 manage.py migrate 
 
 Ejemplos:
@@ -37,9 +39,9 @@ TITLE_COICES = [
 class Author(models.Model):
 	title = models.CharField(max_length=3, choices=TITLE_CHOICES)
 
-===============
+# Vistas
 
-Pasos para crear una vista:
+### Pasos para crear una vista:
  * Definir clase o func en app/views.py
  * Agregar .html en templates/app_name/nombre_$.html
  * Nueva url en app/urls.py
@@ -48,7 +50,7 @@ Pasos para crear una vista:
  * Nueva entrada en app_proj/urls.py
  * Agregar {% url '$app_name:path' var %} a la vista que la referencia
 
-Pasos para crear un form
+### Pasos para crear un form
  * Necesito una vista que contenga al form
  * Un template
  * Un modelo
