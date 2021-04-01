@@ -6,6 +6,8 @@ class Proceso(models.Model):
     nombre = models.CharField(max_length=100)
     def __str__(self):
         return self.nombre
+    def get_absolute_url(self):
+        return reverse('orden_app:index')
 
 class Orden(models.Model):
     nombre = models.CharField(max_length=100)
