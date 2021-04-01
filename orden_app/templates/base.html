@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-	</style>
-	<meta charset="utl-8">
-	<title>{% block titulo %} {% endblock %}</title>
+	{#<link rel="stylesheet" href="style.css">#}
+	<title>{% block titulo %} Ordenes app {% endblock %}</title>
 </head>
 <body>
-	<h1>
-		{% block encabezado %}
-		{% endblock %}
-	</h1>
-
-	<div>
-		{% block contenido %}
+	<div id="sidebar">
+		{% block sidebar %}
+		<ul>
+			<li><a href="{% url 'orden_app:index' %}"> Index </a></li>
+			<li><a href="{% url 'orden_app:orden_lista' %}"> Ordenes lista </a></li>
+			<li><a href="{% url 'orden_app:proceso_lista' %}"> Procesos lista </a></li>
+		</ul>		
 		{% endblock %}
 	</div>
 
-	<footer>
-		{% block footer %}
+	<div id="contenido">
+		{% block contenido %}
 		{% endblock %}
+	</div>
+	
+	<footer>
 	</footer>
 </body>
 </html>

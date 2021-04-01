@@ -1,9 +1,5 @@
 {% extends "base.html" %}
 
-{% block titulo %}
-	Index de ordenes	
-{% endblock %}
-
 {% block contenido %}
 	<h1> Index de ordenes </h1>
 	<a href="{% url 'orden_app:orden_lista' %}"> Lista de ordenes </a></br>
@@ -14,6 +10,3 @@
 	</br>
 {% endblock %}
 
-{% block footer %}
-	<a href="{% url 'orden_app:index' %}"> Index </a>	
-{% endblock %}
