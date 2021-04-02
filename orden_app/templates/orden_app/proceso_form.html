@@ -1,8 +1,11 @@
-<h3> Crear nuevo proceso </h3>
+{% extends "base_proceso.html" %}
 
-<form method="POST">
-{% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit" value="Save">
-</form>
+{% block proceso_form %}
+	<h3> Crear nuevo proceso </h3>
 
+	<form method="POST">
+	{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Save">
+	</form>
+{% endblock %}

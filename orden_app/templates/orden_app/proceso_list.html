@@ -1,7 +1,11 @@
-<h2> Lista de procesos </h2>
+{% extends "base_proceso.html" %}
 
-<ul>
-{% for proc in object_list %}
-<li>Proceso : <a href="{% url 'orden_app:proceso_detalle' proc.id %}">{{ proc.nombre }}</a></li>
-{% endfor %}
-</ul>
+{% block proceso_contenido %}
+	<h2> Lista de procesos </h2>
+
+	<ul>
+	{% for proc in object_list %}
+	<li>Proceso : <a href="{% url 'orden_app:proceso_detalle' proc.id %}">{{ proc.nombre }}</a></li>
+	{% endfor %}
+	</ul>
+{% endblock %}

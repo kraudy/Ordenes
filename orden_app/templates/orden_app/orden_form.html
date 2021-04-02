@@ -1,8 +1,14 @@
-<h1> Crear nueva orden </h1>
+{% extends "base_orden.html" %}
 
-<form method="POST">
-{% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit" value="Save">
-</form>
+{% block orden_contenido %}
+  <h1> Crear nueva orden </h1>
+{% endblock %}
+
+{% block orden_form %}
+	<form method="POST">
+	{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Save">
+	</form>
+{% endblock %}
 

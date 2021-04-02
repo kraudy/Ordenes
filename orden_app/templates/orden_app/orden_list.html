@@ -1,7 +1,10 @@
-<h2> Lista de las ordenes </h2>
+{% extends "base_orden.html" %}
 
-<ul>
-{% for orden in object_list %}
-<li>Nombre de orden: <a href="{% url 'orden_app:orden_detalle' orden.id %}">{{ orden.nombre }}</a></li>
-{% endfor %}
-</ul>
+{% block orden_contenido %}
+	<h2> Lista de las ordenes </h2>
+	<ul>
+	{% for orden in object_list %}
+	<li>Nombre de orden: <a href="{% url 'orden_app:orden_detalle' orden.id %}">{{ orden.nombre }}</a></li>
+	{% endfor %}
+	</ul>
+{% endblock %}

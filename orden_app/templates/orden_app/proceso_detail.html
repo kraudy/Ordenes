@@ -1,8 +1,12 @@
-<h2> Detalle del proceso: {{ proceso_detalle.nombre }} </h2>
+{% extends "base_proceso.html" %}
 
-<p>Nombre : {{ proceso_detalle.nombre }}</p>
-<ul>
-{% for orden in proceso_detalle.orden_set.all %}
-	<li>{{ orden.nombre }}</li>
-{% endfor %}
-</ul>
+{% block proceso_contenido %}
+	<h2> Detalle del proceso: {{ proceso_detalle.nombre }} </h2>
+
+	<p>Nombre : {{ proceso_detalle.nombre }}</p>
+	<ul>
+	{% for orden in proceso_detalle.orden_set.all %}
+		<li>{{ orden.nombre }}</li>
+	{% endfor %}
+	</ul>
+{% endblock %}
