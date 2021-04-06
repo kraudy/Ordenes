@@ -39,6 +39,23 @@ TITLE_COICES = [
 class Author(models.Model):
 	title = models.CharField(max_length=3, choices=TITLE_CHOICES)
 
+# Base de datos
+
+### Agregar postgresql
+
+se debe agregar lo siguiente en $proj_name/settings
+
+TABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '<db_name>',
+        'USER': '<db_username>',
+        'PASSWORD': '<user_pass>',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+
 # Vistas
 
 ### Pasos para crear una vista:
